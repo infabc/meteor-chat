@@ -37,7 +37,7 @@ if (Meteor.isServer) {
     insertMessage: function(text) {
       if (!this.userId) {
         throw new Meteor.Error("logged-out",
-          "The user must be logged in to post a message.");
+          "Użytkownik musi być zalogowany, aby wysłać wiadomość.");
       }
       var user = Meteor.users.findOne(this.userId);
       return Messages.insert({
