@@ -85,28 +85,7 @@
     <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 3"></div>
   </div>
   
-  <div class="row">
-    <form class="col s6">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-    </form>
-  </div>
+
   
   <a name="czat">
   <div class="container">
@@ -187,8 +166,38 @@
 
 <template name="hello">
 	{{> loginButtons}}
+	
+	<div class="widget-item z-depth-1">
+<b>Sign In</b>
+
+<div>
+<div class="row">
+<form class="col s12">
+<div class="row">
+
+<div class="input-field col s12">
+<i class="mdi-action-account-circle prefix"></i>
+<input id="username" type="text" class="validate">
+<label for="username">Username</label>
+</div>
+
+<div class="input-field col s12">
+<i class="mdi-action-https prefix"></i>
+<input id="password" type="password" class="validate">
+<label for="password">Password</label></div>
+
+<button class="btn waves-effect waves-light" type="submit">
+Login<i class="mdi-action-lock-open right"></i></button>
+
+</div>
+</form>
+
+</div>
+</div>
+</div>
 		
   <br/><br/>
+  <div class="widget-item z-depth-1">
   <form class="chat-form">
   	<i class="mdi-editor-mode-edit prefix"></i>
     <textarea name="message" id="icon_prefix2" class="materialize-textarea"></textarea>
@@ -197,7 +206,8 @@
     <i class="mdi-content-send right"></i>
   </button>
   </form>
-
+  </div>
+  
   {{#each messages}}
     <p>{{username}}: {{text}}</p>
   {{/each}}
